@@ -14,10 +14,75 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="./style.css" />
     <title>Teo Oliver</title>
   </head>
   <body>
+    <nav class="navbar hide-on-large top">
+      <a onclick="openSlideNav()" class="button-toggle-nav" href="#intro">
+        <i class="open-nav-icon fas fa-bars"></i>
+      </a>
+
+      <div class="navbar-title" id="title ">
+        <a class="title" href="#intro">Teo Oliver</a>
+      </div>
+    </nav>
+
+    <nav id="slide-side-nav" class="navbar hide-on-large slide">
+      <ul class="side-nav" id="slide-out">
+        <hr />
+        <li>
+          <a
+            class="logo-container"
+            href="#about"
+            aria-label="Navigate to the beginning of the page"
+          >
+            <span>About</span></a
+          >
+        </li>
+        <hr />
+        <li>
+          <a
+            class="logo-container"
+            href="#projects"
+            aria-label="Navigate to the beginning of the page"
+          >
+            <span>Projects</span></a
+          >
+        </li>
+        <hr />
+        <li>
+          <a
+            class="logo-container"
+            href="#education"
+            aria-label="Navigate to the beginning of the page"
+          >
+            <span>Education</span></a
+          >
+        </li>
+        <hr />
+        <li>
+          <a
+            class="logo-container"
+            href="#contact"
+            aria-label="Navigate to the beginning of the page"
+          >
+            <span>Contact</span></a
+          >
+        </li>
+        <hr />
+        <li>Resume</li>
+        <hr />
+      </ul>
+    </nav>
+
     <nav class="side-nav fixed" id="navbar">
       <ul>
         <li class="logo">
@@ -249,5 +314,18 @@
         <section id="resume"></section>
       </div>
     </main>
+
+    <div onclick="closeSlideNav()" class="mask" id="mask"></div>
+    <script>
+      function openSlideNav() {
+        document.getElementById('slide-side-nav').style.display = 'block';
+        document.getElementById('mask').style.display = 'block';
+      }
+
+      function closeSlideNav() {
+        document.getElementById('slide-side-nav').style.display = 'none';
+        document.getElementById('mask').style.display = 'none';
+      }
+    </script>
   </body>
 </html>

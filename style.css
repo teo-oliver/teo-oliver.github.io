@@ -6,6 +6,34 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.mask {
+  background-color: rgba(3, 3, 3, 0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9;
+  display: none;
+}
+
+nav.hide-on-large.top {
+  display: none;
+}
+
+nav.hide-on-large.slide {
+  display: none;
+}
+
+.open-nav-icon {
+  color: black;
+}
+
+.navbar-title {
+  color: black;
+  text-transform: uppercase;
+}
+
 nav.side-nav.fixed {
   height: 100%;
   width: 160px;
@@ -15,6 +43,19 @@ nav.side-nav.fixed {
   overflow-x: hidden;
   padding-top: 20px;
   /* background-color: #111; */
+}
+
+.navbar.hide-on-large.slide {
+  background-color: white;
+  height: 100%;
+  width: 160px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  overflow-x: hidden;
+  padding-top: 20px;
+  z-index: 10;
+  transition: 1s;
 }
 
 ul {
@@ -40,4 +81,51 @@ h3 {
 
 .white-text {
   color: #ffffff !important;
+}
+
+/* responsive styles */
+
+@media screen and (max-width: 900px) {
+  nav.side-nav.fixed {
+    position: relative;
+    display: none;
+    /* background-color: #111; */
+  }
+
+  nav.hide-on-large.top {
+    display: block;
+    position: fixed;
+    background-color: white;
+    height: 64px;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding-top: 20px;
+  }
+
+  a.button-toggle-nav {
+    float: left;
+  }
+  a.button-toggle-nav :hover {
+    color: #008073;
+  }
+
+  a.title {
+    color: black;
+    text-decoration: none;
+  }
+  .navbar-title {
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  main {
+    margin-left: 5px;
+    padding-top: 64px;
+  }
 }
