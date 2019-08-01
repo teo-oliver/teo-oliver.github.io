@@ -24,18 +24,25 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Teo Oliver</title>
   </head>
+
+  <!-- Make smooth scrolling work on Safari (simple jQuery script) -->
+
   <body>
-    <nav class="navbar hide-on-large top">
-      <a onclick="openSlideNav()" class="button-toggle-nav" href="#">
+    <!-- Fixed Top Nav -->
+
+    <nav class="hide-on-large top">
+      <a class="button-toggle-nav">
         <i class="open-nav-icon fas fa-bars"></i>
       </a>
 
       <div class="navbar-title" id="title ">
-        <a class="title" href="#intro">Teo Oliver</a>
+        <a class="title" href="#about">Teo Oliver</a>
       </div>
     </nav>
 
-    <nav id="slide-side-nav" class="navbar hide-on-large slide">
+    <!-- Slide Side Nav -->
+
+    <nav id="slide-side-nav" class=" hide-on-large-slide">
       <ul class="side-nav" id="slide-out">
         <hr />
         <li>
@@ -57,6 +64,19 @@
             <span>Projects</span></a
           >
         </li>
+
+        <hr />
+
+        <li>
+          <a
+            class="logo-container"
+            href="#skills"
+            aria-label="Navigate to the beginning of the page"
+          >
+            <span>Skills</span></a
+          >
+        </li>
+
         <hr />
         <li>
           <a
@@ -67,7 +87,9 @@
             <span>Education</span></a
           >
         </li>
+
         <hr />
+
         <li>
           <a
             class="logo-container"
@@ -78,16 +100,22 @@
           >
         </li>
         <hr />
-        <li>Resume</li>
+        <li>
+          <a class="logo-container" href="#">
+            <span>Resume</span>
+          </a>
+        </li>
         <hr />
       </ul>
     </nav>
+
+    <!-- Fixed Side Nav -->
 
     <nav class="side-nav fixed" id="navbar">
       <ul>
         <li class="logo">
           <a
-            class="logo-container"
+            class="scrool-link"
             href="#about"
             aria-label="Navigate to the beginning of the page"
             ><h4>Teo Oliver</h4></a
@@ -96,7 +124,7 @@
         <hr />
         <li>
           <a
-            class="logo-container"
+            class="scrool-link"
             href="#about"
             aria-label="Navigate to the beginning of the page"
           >
@@ -106,7 +134,7 @@
         <hr />
         <li>
           <a
-            class="logo-container"
+            class="scrool-link"
             href="#projects"
             aria-label="Navigate to the beginning of the page"
           >
@@ -114,19 +142,32 @@
           >
         </li>
         <hr />
+
         <li>
           <a
-            class="logo-container"
+            class="scrool-link"
+            href="#skills"
+            aria-label="Navigate to the beginning of the page"
+          >
+            <span>Skills</span></a
+          >
+        </li>
+
+        <hr />
+        <li>
+          <a
+            class="scrool-link"
             href="#education"
             aria-label="Navigate to the beginning of the page"
           >
             <span>Education</span></a
           >
         </li>
+
         <hr />
         <li>
           <a
-            class="logo-container"
+            class="scrool-link"
             href="#contact"
             aria-label="Navigate to the beginning of the page"
           >
@@ -134,7 +175,11 @@
           >
         </li>
         <hr />
-        <li>Resume</li>
+        <li>
+          <a class="logo-container" href="#">
+            <span>Resume</span>
+          </a>
+        </li>
         <hr />
       </ul>
     </nav>
@@ -142,21 +187,31 @@
     <main>
       <div data-spy="scroll" data-target="#navbar" data-offset="0">
         <section id="about">
-          <h3 class=" white-text teal">About</h3>
-          <p class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            temporibus voluptatum modi excepturi labore quidem pariatur,
-            eligendi, aliquam illum accusamus eum aspernatur? Amet explicabo
-            quasi obcaecati rerum ut perspiciatis deleniti velit illo. Sint
-            voluptatum quidem ut reprehenderit. Voluptatem nulla labore adipisci
-            molestiae minima, neque eveniet saepe, hic quaerat, dicta quasi
-            amet. Laborum, quis eum. Assumenda cumque modi nisi quasi, iusto
-            corporis nobis quo? Ex non voluptates doloribus culpa vitae labore!
-          </p>
+          <div class="offset-space"></div>
+          <h3 class="page-title white-text teal">About</h3>
+          <div class="content">
+            <blockquote>
+              Mission-driven full stack developer with a passion for learning, collaboration and music.
+            </blockquote>
+            <p>
+              I am Sound Engineer and a self-taught full stack web developer. I
+              used to work with sound for movies and games, but with time I got
+              more and more interested in the programming part of it. I've
+              worked with Unreal Engine and Unity but my passion for web
+              development led me to invest most of my programing time in
+              Javascript.
+            </p>
+            <br />
+            <p>
+              I’m currently developing my skills on the MERN stack and also I've been exploring Typescript and Svelte.
+            </p>
+            <br />
+          </div>
         </section>
         <section id="projects">
+          <div class="offset-space"></div>
           <h3 class="page-title white-text teal">Projects</h3>
-          <p class="content">
+          <div class="content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
             temporibus voluptatum modi excepturi labore quidem pariatur,
             eligendi, aliquam illum accusamus eum aspernatur? Amet explicabo
@@ -165,11 +220,13 @@
             molestiae minima, neque eveniet saepe, hic quaerat, dicta quasi
             amet. Laborum, quis eum. Assumenda cumque modi nisi quasi, iusto
             corporis nobis quo? Ex non voluptates doloribus culpa vitae labore!
-          </p>
+          </div>
+          <br />
         </section>
         <section id="skills">
+          <div class="offset-space"></div>
           <h3 class="page-title white-text teal">Skills</h3>
-          <p class="content">
+          <div class="content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
             temporibus voluptatum modi excepturi labore quidem pariatur,
             eligendi, aliquam illum accusamus eum aspernatur? Amet explicabo
@@ -178,11 +235,13 @@
             molestiae minima, neque eveniet saepe, hic quaerat, dicta quasi
             amet. Laborum, quis eum. Assumenda cumque modi nisi quasi, iusto
             corporis nobis quo? Ex non voluptates doloribus culpa vitae labore!
-          </p>
+          </div>
+          <br />
         </section>
         <section id="education">
+          <div class="offset-space"></div>
           <h3 class="page-title white-text teal">Education</h3>
-          <p class="content">
+          <div class="content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
             temporibus voluptatum modi excepturi labore quidem pariatur,
             eligendi, aliquam illum accusamus eum aspernatur? Amet explicabo
@@ -191,56 +250,64 @@
             molestiae minima, neque eveniet saepe, hic quaerat, dicta quasi
             amet. Laborum, quis eum. Assumenda cumque modi nisi quasi, iusto
             corporis nobis quo? Ex non voluptates doloribus culpa vitae labore!
-          </p>
+          </div>
+          <br />
         </section>
         <section id="contact">
+          <div class="offset-space"></div>
           <h3 class="page-title white-text teal">Contact</h3>
-          <p class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            temporibus voluptatum modi excepturi labore quidem pariatur,
-            eligendi, aliquam illum accusamus eum aspernatur? Amet explicabo
-            quasi obcaecati rerum ut perspiciatis deleniti velit illo. Sint
-            voluptatum quidem ut reprehenderit. Voluptatem nulla labore adipisci
-            molestiae minima, neque eveniet saepe, hic quaerat, dicta quasi
-            amet. Laborum, quis eum. Assumenda cumque modi nisi quasi, iusto
-            corporis nobis quo? Ex non voluptates doloribus culpa vitae labore!
-          </p>
+          <div class="content">
+            <p><i class="fa fa-envelope"></i> teo.liz.oli@gmail.com</p>
+            <p><i class="fab fa-github"></i>github.com/teo-oliver</p>
+            <p><i class="fab fa-linkedin"></i></i>linkedin.com/in/teooliver</p>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
         </section>
         <section id="resume"></section>
       </div>
     </main>
 
-    <div onclick="closeSlideNav()" class="mask" id="mask"></div>
+    <div class="mask" id="mask"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
 
     <script>
-      // Think of animating the z-index instead of display
+      $(document).ready(function() {
+        $('.button-toggle-nav').on('click', function() {
+          $('#slide-side-nav').toggleClass('active');
+          $('.mask').fadeToggle('fast', 'linear');
+        });
 
-      function openSlideNav() {
-        // Handle Nav
-        document.getElementById('slide-side-nav').style.display = 'block';
-
-        // Handle Mask
-        const mask = document.getElementById('mask');
-        // mask.style.display = 'block';
-        mask.style.width = '100%';
-        mask.style.opacity = '1';
-      }
-
-      function closeSlideNav() {
-        // Handle Nav
-        document.getElementById('slide-side-nav').style.display = 'none';
-
-        // Handle Mask
-        const mask = document.getElementById('mask');
-        mask.style.opacity = '0';
-        mask.addEventListener(
-          'transitionend',
-          () => {
-            mask.style.width = '0';
-          },
-          false
-        );
-      }
+        $('.mask').on('click', function() {
+          $('#slide-side-nav').toggleClass('active');
+          $('.mask').fadeToggle('fast', 'linear');
+        });
+      });
     </script>
   </body>
 </html>
