@@ -1,8 +1,8 @@
 /* Create class floating for shadow-box styling */
-
+/* 
 html {
-  /* scroll-behavior: smooth; */
-}
+  scroll-behavior: smooth;
+} */
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -12,6 +12,10 @@ body {
   padding-left: 40px;
   font-size: 1.68rem;
   width: 95%;
+}
+
+#badge {
+  font-size: 64px;
 }
 
 .intro-image {
