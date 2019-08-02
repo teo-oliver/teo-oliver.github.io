@@ -14,6 +14,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -36,7 +37,7 @@
       </a>
 
       <div class="navbar-title" id="title ">
-        <a class="title" href="#about">Teo Oliver</a>
+        <a class="title" href="#intro">Teo Oliver</a>
       </div>
     </nav>
 
@@ -47,7 +48,7 @@
         <hr />
         <li>
           <a
-            class="logo-container"
+            class="logo-container scrool-link"
             href="#about"
             aria-label="Navigate to the beginning of the page"
           >
@@ -57,7 +58,7 @@
         <hr />
         <li>
           <a
-            class="logo-container"
+            class="logo-container scrool-link"
             href="#projects"
             aria-label="Navigate to the beginning of the page"
           >
@@ -69,7 +70,7 @@
 
         <li>
           <a
-            class="logo-container"
+            class="logo-container scrool-link"
             href="#skills"
             aria-label="Navigate to the beginning of the page"
           >
@@ -80,7 +81,7 @@
         <hr />
         <li>
           <a
-            class="logo-container"
+            class="logo-container scrool-link"
             href="#education"
             aria-label="Navigate to the beginning of the page"
           >
@@ -92,7 +93,7 @@
 
         <li>
           <a
-            class="logo-container"
+            class="logo-container scrool-link"
             href="#contact"
             aria-label="Navigate to the beginning of the page"
           >
@@ -187,7 +188,7 @@
 
     <main>
       <div data-spy="scroll" data-target="#navbar" data-offset="0">
-        <section id="intro">
+        <section id="intro"> 
           <div class="offset-space"></div>
           <!-- <h3 class="page-title white-text teal">About</h3> -->
           <div>
@@ -307,8 +308,10 @@
       crossorigin="anonymous"
     ></script>
 
+    
     <script>
       $(document).ready(function() {
+        //Toggle SideNav
         $('.button-toggle-nav').on('click', function() {
           $('#slide-side-nav').toggleClass('active');
           $('.mask').fadeToggle('fast', 'linear');
@@ -318,6 +321,18 @@
           $('#slide-side-nav').toggleClass('active');
           $('.mask').fadeToggle('fast', 'linear');
         });
+
+        //SmoothScroll (so it works on Safari too)
+        var scrollLink = $('.scrool-link');
+
+        scrollLink.on('click',function(e){
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: $(this.hash).offset().top
+          }, 500)
+        })
+
+
       });
     </script>
   </body>
