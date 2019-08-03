@@ -18,6 +18,11 @@ body {
   font-size: 64px;
 }
 
+.badge-img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
 .intro-image {
   /* display: none; */
   max-height: auto;
