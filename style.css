@@ -147,7 +147,7 @@ li a {
 }
 
 li a,
-a:hover {
+li a:hover {
   color: black;
   display: list-item;
   box-sizing: content-box;
@@ -186,6 +186,24 @@ div.offset-space {
 
 .white-text {
   color: #ffffff !important;
+}
+
+.p-contact {
+  color: black;
+}
+
+.p-contact a {
+  margin-right: 1rem;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  color: rgb(70, 70, 70);
+  vertical-align: middle;
+}
+
+.p-contact i {
+  font-size: 3rem;
+  /* vertical-align: center; */
 }
 
 /* responsive styles */
@@ -242,5 +260,14 @@ div.offset-space {
     padding: 40px;
     font-size: 1.3rem;
     /* height: 100vh; */
+  }
+
+  .p-contact a {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .p-contact i {
+    font-size: 4rem;
   }
 }
