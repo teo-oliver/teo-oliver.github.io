@@ -154,6 +154,12 @@ li a:hover {
   text-decoration: none;
 }
 
+.active-link {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-left: 2px;
+  transition: 100ms;
+}
+
 li:hover {
   background-color: rgba(0, 0, 0, 0.1);
   padding-left: 2px;
